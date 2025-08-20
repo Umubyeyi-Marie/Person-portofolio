@@ -1,8 +1,9 @@
+import Image from "next/image";
 export default function Home() {
   return (
     <section
       id="home"
-      className="p-20 flex flex-col md:flex-row items-center justify-between bg-gray-900 max-w-full mx-auto"
+      className="p-22 flex flex-col md:flex-row items-center justify-between bg-gray-900 max-w-full mx-auto"
     >
       <div className="md:w-1/2 mb-10 md:mb-0 p-5 ml-10">
         <h2 className="text-4xl font-extrabold text-yellow-300 mb-4">Hi</h2>
@@ -31,9 +32,12 @@ export default function Home() {
       </div>
 
       <div className="md:w-1/2 flex items-center justify-center rounded-lg overflow-hidden h-100">
-        <img
-          src="me.jpg"
+
+        <Image
+          src="/me.jpg"
           alt="Hero Image"
+          width={500}
+          height={500}
           className="w-100 h-100 object-cover rounded-full"
         />
       </div>

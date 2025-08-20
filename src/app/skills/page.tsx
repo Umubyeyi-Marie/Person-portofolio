@@ -32,8 +32,8 @@ export default function SkillsPage() {
   ];
 
   return (
-    <section id="skills" className="py-8 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-yellow-300 mb-12 text-center">My Skills</h2>
+    <section id="skills" className="py-6 px-4 max-w-6xl mx-auto">
+      <h2 className="text-5xl font-bold text-yellow-300 mb-12 text-center">My Skills</h2>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Technical Skills - Left */}
