@@ -1,6 +1,4 @@
-'use client'; // Client component since we might add interactivity later
-
-import Footer from "@/components/Footer";
+'use client'; 
 
 type Skill = {
   name: string;
