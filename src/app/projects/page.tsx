@@ -25,7 +25,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col h-86 items-center bg-gray-900 py-6">
+    <div className="flex flex-col  items-center bg-gray-900 py-6">
       <h1 className="text-5xl font-bold text-yellow-400 mb-8 text-center">Projects</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
