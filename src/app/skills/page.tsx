@@ -30,20 +30,24 @@ export default function SkillsPage() {
   ];
 
   return (
-    <section id="skills" className="py-6 px-4 max-w-6xl mx-auto">
-      <h2 className="text-5xl font-bold text-yellow-300 mb-12 text-center">My Skills</h2>
+    <section id="skills" className="py-8 px-4 max-w-6xl mx-auto">
+      <h2 className="text-4xl sm:text-5xl font-bold text-yellow-300 mb-12 text-center">
+        My Skills
+      </h2>
 
-      <div className="grid grid-cols-12 gap-8">
-        {/* Technical Skills - Left */}
-        <div className="col-span-12 md:col-span-8 bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 className="text-3xl font-semibold text-yellow-200 mb-6">Technical Skills</h3>
-          <div className="grid grid-cols-2 gap-6">
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Technical Skills */}
+        <div className="md:flex-2 bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-yellow-200 mb-6">
+            Technical Skills
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {skills.map((skill, index) => (
               <div key={index}>
                 <p className="text-lg font-semibold text-gray-200 mb-1">{skill.name}</p>
                 <div className="w-full bg-gray-700 rounded-full h-4">
                   <div
-                    className={`h-4 rounded-full ${skill.color}`}
+                    className={`h-4 rounded-full ${skill.color} transition-all duration-500`}
                     style={{ width: `${skill.level}%` }}
                   ></div>
                 </div>
@@ -52,20 +56,23 @@ export default function SkillsPage() {
           </div>
         </div>
 
-        {/* Soft Skills - Right */}
-        <div className="col-span-12 md:col-span-4 bg-gray-800 p-6 rounded-lg shadow-md">
-          <h3 className="text-3xl font-semibold text-yellow-200 mb-4">Soft Skills</h3>
+        {/* Soft Skills */}
+        <div className="md:flex-1 bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-yellow-200 mb-4">
+            Soft Skills
+          </h3>
           <ul className="space-y-3">
             {softSkills.map((skill, idx) => (
-              <li key={idx} className="text-white font-medium bg-gray-700 py-2 px-4 rounded">
+              <li
+                key={idx}
+                className="text-white font-medium bg-gray-700 py-2 px-4 rounded hover:bg-yellow-600 transition-colors"
+              >
                 {skill}
               </li>
             ))}
           </ul>
         </div>
       </div>
-
-      
     </section>
   );
 }

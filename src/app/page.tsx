@@ -1,15 +1,16 @@
 import Image from "next/image";
+
 export default function Home() {
   return (
     <section
       id="home"
-      className="p-22 flex flex-col md:flex-row items-center justify-between bg-gray-900 max-w-full mx-auto"
+      className="px-4 py-16 md:py-22 flex flex-col md:flex-row items-center justify-between bg-gray-900 w-full mx-auto h-screen"
     >
-      <div className="md:w-1/2 mb-10 md:mb-0 p-5 ml-10">
+      <div className="md:w-1/2 mb-10 md:mb-0 md:p-5 md:ml-10">
         <h2 className="text-4xl font-extrabold text-yellow-300 mb-4">Hi</h2>
-        <p className="text-lg text-gray-200 mb-4 leading-relaxed h-64">
-          I’m Umubyeyi Marie Bienvenue, a creative developer crafting stunning,
-          functional web experiences with modern tech. As Umubyeyi, I’m
+        <p className="text-lg text-gray-200 mb-6 md:mb-4 leading-relaxed">
+          I'm Umubyeyi Marie Bienvenue, a creative developer crafting stunning,
+          functional web experiences with modern tech. As Umubyeyi, I'm
           passionate about translating ideas into user-friendly interfaces that
           leave a lasting impression. From front-end design to seamless user
           interactions, I focus on detail and performance. I strive to push
@@ -18,28 +19,23 @@ export default function Home() {
         </p>
         <a
           href="/about"
-          className="inline-block bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition-colors shadow hover:shadow-lg "
+          className="inline-block bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition-colors shadow hover:shadow-lg"
         >
           More About Me
         </a>
-
-        {/* <a
-            href="/cv"
-            className="inline-block bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-blue-600 transition-colors shadow hover:shadow-lg"
-          >
-            CV
-          </a> */}
       </div>
 
-      <div className="md:w-1/2 flex items-center justify-center rounded-lg overflow-hidden h-100">
-
-        <Image
-          src="/me.jpg"
-          alt="Hero Image"
-          width={500}
-          height={500}
-          className="w-100 h-100 object-cover rounded-full"
-        />
+      <div className="md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
+        <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-yellow-300">
+          <Image
+            src="/me.jpg"
+            alt="Umubyeyi Marie Bienvenue"
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+            priority
+          />
+        </div>
       </div>
     </section>
   );
